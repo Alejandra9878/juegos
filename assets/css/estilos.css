@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1920px;
+    min-width: 360px;
+    
+}
+.header-title{
+    text-align: center;
+    background-color: none;
+    padding: 10px;
+}
+.background-header{
+    background-image: url("https://img.freepik.com/vector-gratis/diseno-banner-colorido-zona-infantil_1017-33748.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1697241600&semt=ais");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.aside-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.hr-aside{
+    display: none;
+}
+.aside-content li{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(146, 20, 20);
+    border-radius: 5px;
+    background-color: rgb(147, 53, 184);
+    box-shadow: 0 0 5px rgb(17, 109, 170);
+}
+.aside-content a{
+    text-decoration: none;
+    color: black;
+}
+.aside-content a:hover{
+    color: #007bff;
+    font-weight: bold;
+}
+.news-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.jueguitos {
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 20px; 
+}
+
+.jueguitos img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+.news-juegos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news-juegos h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+.jueguitos img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.jueguitos a{
+    color: #22c00d;
+    display: inline-block;
+    text-align: right;
+    text-decoration: none;
+    width: 100%;
+}
+.jueguitos a:hover{
+    color: #a8190f;
+    font-weight: bold;
+}
+footer{
+    background-color: #000000;
+    color: rgb(182, 95, 131);
+    padding: 10px;
+    margin-top: 2em;
+    width: 100%;
+}
+.footer-title{
+    text-align: center;
+    margin-top: 2em;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+ }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .jueguitos{
+        margin-bottom: 4em;
+    }
+    .jueguitos h3{
+        font-size: 1.5em;
+    }
+    .jueguitos img{
+        height: 300px;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        
+    }
+    .footer-title{
+        margin-right: 3em;
+        margin-top: 0;
+        width: 100%;
+    }
+    .footer-content{
+        margin-left: 3em;
+        width: 100%;
+    }
+ }
+
+@media (min-width: 992px) { 
+ }
+
+@media (min-width: 1200px) { 
+    .jueguitos{
+        padding: 10px;
+        width: 50%;
+    }
+ }
+
+@media (min-width: 1400px) { 
+    aside{
+        width: 100%;
+    }
+    .aside-title{
+        margin-bottom: 3em;
+    }
+    .aside-title h2{
+        margin-bottom: 0;
+        margin-top: 2em;
+    }
+    .hr-aside{
+        display: block;
+    }
+    main{
+        display: flex;
+    }
+ }
