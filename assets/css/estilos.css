@@ -2,6 +2,39 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* En el archivo estilos.css */
+/* Estilo para el formulario */
+#miFormulario {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #040303;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para el botón de enviar */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin-right: auto;
@@ -165,4 +198,5 @@ footer{
     main{
         display: flex;
     }
+    
  }
