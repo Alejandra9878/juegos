@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "titulo":"mario bros", 
+        "descripcion":"Aventuras de Mini Mario es un juego de plataformas lleno de diversión diseñado especialmente para niños. En este juego, los jugadores controlarán a Mini Mario, un pequeño fontanero con un gran corazón, mientras se embarca en emocionantes misiones para rescatar a la Princesa Peach de las garras del malvado Bowser."
+        
+
+    },
+
+    {
+        "id":2,
+        "titulo":"speedstorm",
+        "descripcion":"Carreras Divertidas es un emocionante juego de carreras diseñado especialmente para niños. En este juego, los jugadores tendrán la oportunidad de elegir entre una variedad de vehículos divertidos y coloridos, como autos pequeños, diversidad de personajes de disney y superar los diferentes retos"
+    },
+
+    {
+        "id":3,
+        "titulo":"sonic",
+        "descripcion":"El objetivo principal del juego es generalmente recoger anillos dorados y evitar obstáculos y enemigos mientras se avanza a través de niveles llenos de plataformas y trampas"
+    },
+
+    {
+        "id":4,
+        "titulo":"crash",
+        "descripcion":"El juego se desarrolla en diferentes mundos y niveles llenos de obstáculos, enemigos y desafíos. El objetivo principal de Crash es recolectar wumpa fruits, romper cajas, evitar trampas y derrotar a los secuaces del antagonista principal, el Dr. Neo Cortex, quien es un científico loco con la ambición de conquistar el mundo."
+    }
+]

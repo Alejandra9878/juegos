@@ -1,23 +1,46 @@
-const formulario = document.getElementById("miFormulario");
-        formulario.addEventListener("submit", function(event) {
-            event.preventDefault(); // Evita que la página se recargue al enviar el formulario
-            
-            // Capturamos los valores de los campos de entrada
-            const nombre = document.getElementById("nombre").value;
-            const contrasena = document.getElementById("contrasena").value;
-            const correo = document.getElementById("correo").value;
 
-            // Mostramos los valores en la consola
-            console.log("Nombre: " + nombre);
-            console.log("Contraseña: " + contrasena);
-            console.log("Correo: " + correo);
-        });
-        document.getElementById("limpiar").addEventListener("click", function() {
-            document.getElementById("nombre").value = "";
-            document.getElementById("contrasena").value = "";
-            document.getElementById("correo").value = "";
-        });
-        
+        function mostrarEstadoSesion() {
+            var contenido = document.getElementById('contenido');
+            var estadoSesion = document.getElementById('estadoSesion');
+            var sesionIniciada = sessionStorage.getItem('usuario');
+
+            if (sesionIniciada) {
+                estadoSesion.innerHTML = '<p>Bienvenido, ' + sesionIniciada + '! <button onclick="cerrarSesion()">Cerrar Sesión</button></p>';
+                contenido.style.display = 'block';
+            } else {
+                estadoSesion.innerHTML = '';
+                contenido.style.display = 'none';
+            }
+        }
+
+        function realizarAccion() {
+            var nombreUsuario = document.getElementById('nombre').value;
+            var accionBtn = document.getElementById('accionBtn');
+            var accion = accionBtn.innerHTML;
+
+            if (accion === 'Registrar') {
+                sessionStorage.setItem('usuario', nombreUsuario);
+                mostrarEstadoSesion();
+            } else if (accion === 'Iniciar Sesión') {
+                sessionStorage.setItem('usuario', nombreUsuario);
+                mostrarEstadoSesion();
+            }
+            console.log(nombreUsuario);
+            
+        }
+
+        function cerrarSesion() {
+            sessionStorage.removeItem('usuario');
+            mostrarEstadoSesion();
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('nombre').value = '';
+            document.getElementById('contrasena').value = '';
+            document.getElementById('correo').value = '';
+        }
+
+        window.onload = mostrarEstadoSesion;
     
 
 
