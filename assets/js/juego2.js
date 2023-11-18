@@ -12,7 +12,18 @@ const formulario = document.getElementById("miFormulario");
             console.log("Contraseña: " + contrasena);
             console.log("Correo: " + correo);
         });
+        document.getElementById("limpiar").addEventListener("click", function() {
+            document.getElementById("nombre").value = "";
+            document.getElementById("contrasena").value = "";
+            document.getElementById("correo").value = "";
+        });
+        
     
+
+
+
+
+
 
 
 

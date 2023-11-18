@@ -1,3 +1,18 @@
+
+        #accionBtn {
+            background-color: #4CAF50; /* Color de fondo */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Esquinas redondeadas */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 18px; /* Tamaño de la letra */
+        }
+        
+        #accionBtn:hover {
+            background-color: #45a049; /* Cambia el color de fondo al pasar sobre el botón */
+        }
+        
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -33,7 +48,43 @@ input[type="submit"] {
     font-size: 18px;
 }
 
+/* Estilo para el botón "Limpiar" */
+button#limpiar {
+    background-color: #f00; /* Cambia el color de fondo a rojo */
+    color: #fff; /* Cambia el color del texto a blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px; /* Agrega un margen superior para separarlo del botón de enviar */
+}
+
+button#limpiar:hover {
+    background-color: #ff0000; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+/* Estilo para el pie de página */
+/* Estilo para el pie de página */
+footer {
+    background-color: #000000;
+    color: rgb(182, 95, 131);
+    padding: 40px; /* Aumenta el relleno para hacerlo más alto */
+    margin-top: 2em;
+    width: 100%; /* Haz que el pie de página ocupe el 100% del ancho del contenedor */
+    text-align: center; /* Centra el texto en el pie de página */
+}
+
+/* Estilo para el texto en el pie de página */
+footer p {
     
+        width: 100%;
+        height: auto; /* Esto mantiene la proporción original de la imagen */
+        object-fit: cover; /* Asegura que la imagen llene el espacio sin estirarse ni deformarse */
+    }
+    
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;

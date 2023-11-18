@@ -7,18 +7,75 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="contenido">
+        <!-- Contenido principal -->
+        <header>
+            <div class="header-title">
+                <h1> DIVERTIJUEGOS</h1>
+            </div>
+            <div class="background-header"></div>
+        </header>
+        <!-- Resto de tu código HTML -->
+
+        <!-- Aquí agregamos un contenedor para mostrar el estado de inicio de sesión -->
+        <div id="estadoSesion"></div>
+    </div>
+
     <form id="miFormulario">
-       <strong>Nombre</strong> <br> <!--strong para poner negrita la letra-->
+        <strong>Nombre</strong> <br>
         <input type="text" id="nombre"> <br>
-       <strong>Contraseña</strong> <br>
+        <strong>Contraseña</strong> <br>
         <input type="password" id="contrasena"> <br>
         <strong>Correo</strong> <br>
         <input type="email" id="correo"> <br>
-        <input type="submit" name="enviar">
-       
+        <button type="button" id="accionBtn" onclick="realizarAccion()">Registrar</button>
+        <button type="button" id="limpiar" onclick="limpiarFormulario()">Limpiar</button>
+     
     </form>
 
-    <script src="assets/js/juego2.js"></script> <!--para que html sepa donde esta el js y se pueda ejecutar los datos que pido-->
-    
+    <script>
+        function mostrarEstadoSesion() {
+            var contenido = document.getElementById('contenido');
+            var estadoSesion = document.getElementById('estadoSesion');
+            var sesionIniciada = sessionStorage.getItem('usuario');
+
+            if (sesionIniciada) {
+                estadoSesion.innerHTML = '<p>Bienvenido, ' + sesionIniciada + '! <button onclick="cerrarSesion()">Cerrar Sesión</button></p>';
+                contenido.style.display = 'block';
+            } else {
+                estadoSesion.innerHTML = '';
+                contenido.style.display = 'none';
+            }
+        }
+
+        function realizarAccion() {
+            var nombreUsuario = document.getElementById('nombre').value;
+            var accionBtn = document.getElementById('accionBtn');
+            var accion = accionBtn.innerHTML;
+
+            if (accion === 'Registrar') {
+                sessionStorage.setItem('usuario', nombreUsuario);
+                mostrarEstadoSesion();
+            } else if (accion === 'Iniciar Sesión') {
+                sessionStorage.setItem('usuario', nombreUsuario);
+                mostrarEstadoSesion();
+            }
+        }
+
+        function cerrarSesion() {
+            sessionStorage.removeItem('usuario');
+            mostrarEstadoSesion();
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('nombre').value = '';
+            document.getElementById('contrasena').value = '';
+            document.getElementById('correo').value = '';
+        }
+
+        window.onload = mostrarEstadoSesion;
+    </script>
 </body>
 </html>
+
+
